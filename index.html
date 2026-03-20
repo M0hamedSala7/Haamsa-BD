@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلى هموسة قلبي 💖</title>
+    <link rel="icon" href="https://img.icons8.com/emoji/48/heart-suit.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Dynamic Playful Background -->
+    <div class="bg-animate"></div>
+    <div class="floating-elements" id="particles"></div>
+
+    <!-- STAGE 1 & 2: The Refined Envelope -->
+    <div id="envelope-scene">
+        <p class="instruction-text" id="instruction">إضغطي على الظرف يا أميرتي 💌</p>
+        
+        <div class="envelope-wrapper" id="envelope">
+            <div class="envelope-back"></div>
+            
+            <div class="mini-letter" id="mini-letter">
+                <div class="passcode-container">
+                    <div id="reacting-face">🤨</div>
+                    <h3 class="prompt-text">ف ...</h3>
+                    <input type="text" id="passcode-input" placeholder="أكملي الكلمة..." autocomplete="off" autofocus>
+                </div>
+            </div>
+
+            <div class="envelope-front"></div>
+            <div class="envelope-flap" id="flap"></div>
+            <div class="wax-seal" id="seal">❤️</div>
+        </div>
+    </div>
+
+    <!-- STAGE 3: The Story Scroll -->
+    <div id="full-letter-scene" class="hidden">
+        <header class="story-header">
+            <h1 class="main-title">كل سنة وأنتي طيبة يا هموسة ✨</h1>
+            <p class="subtitle">اليوم هو ميلاد أجمل ما رأت عيني</p>
+        </header>
+
+        <main class="story-container" id="image-gallery">
+            <!-- Images will be injected here via JS for 15 slots -->
+        </main>
+
+        <div class="audio-card">
+            <h3>🎶 صوتك هو لحني المفضل 🎶</h3>
+            <audio controls>
+                <source src="audio.oga" type="audio/ogg">
+                متصفحك لا يدعم تشغيل الصوت.
+            </audio>
+        </div>
+
+        <!-- The Final Message Card -->
+        <section class="final-letter-card">
+            <div class="letter-inner">
+                <h2>إلى أميرتي الصغنونة.. 👑</h2>
+                <p>
+                    كل عام وأنتِ بخير يا أغلى ما في العالم كله.. أنتِ الشمس التي تشرق في قلبي كل صباح، وضحكتكِ هي النور الذي يضيء كوني بما فيه. 
+                    <br><br>
+                    جمالكِ ليس له منطق، قد تجاوز كل الحدود، وملامحكِ ملائكية برقة لا توصف، فلا أحد يشبهكِ ولا حتى يقترب من سحركِ. أنتِ أجمل نعمة أهداني إياها القدر في حياتي.
+                    <br><br>
+                    أتمنى في عامكِ الجديد أن تحققي كل أحلامكِ، وأن نكون معاً أقوى، نتجاوز كل الصعاب التي تواجهنا يداً بيد.. وأن يجمعنا الله قريباً لتكوني خطيبتي ونبدأ مشوارنا الأبدي يا قطتي الصغنونة.
+                    <br><br>
+                    <strong>بحبك أوييييي.. كل سنة وأنتِ طيبة يا حياتي.</strong>
+                </p>
+                <div class="signature">حبيبك المخلص ❤️</div>
+            </div>
+        </section>
+        
+        <footer style="height: 100px;"></footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

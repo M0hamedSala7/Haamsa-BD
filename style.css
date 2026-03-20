@@ -1,0 +1,195 @@
+:root {
+    --primary-pink: #ff4d6d;
+    --soft-pink: #fff0f3;
+    --gold: #ffb703;
+    --text-dark: #590d22;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--soft-pink);
+    color: var(--text-dark);
+    overflow: hidden;
+    direction: rtl;
+}
+
+/* Playful Dynamic Background */
+.bg-animate {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, #fff0f3 0%, #ffccd5 100%);
+    z-index: -2;
+}
+
+.floating-elements {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Envelope Alignment Fixes */
+#envelope-scene {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.instruction-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--primary-pink);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.envelope-wrapper {
+    position: relative;
+    width: 320px;
+    height: 220px;
+    cursor: pointer;
+}
+
+.envelope-back {
+    position: absolute;
+    width: 100%; height: 100%;
+    background: #ff4d6d;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(255, 77, 109, 0.3);
+}
+
+.envelope-front {
+    position: absolute;
+    width: 100%; height: 100%;
+    background: #ff758f;
+    clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 100%, 0 100%);
+    z-index: 3;
+    border-radius: 0 0 10px 10px;
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0; width: 100%; height: 100%;
+    background: #ff4d6d;
+    clip-path: polygon(0 0, 50% 50%, 100% 0);
+    transform-origin: top;
+    z-index: 4;
+}
+
+.wax-seal {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px; height: 50px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center; justify-content: center;
+    z-index: 5;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.mini-letter {
+    position: absolute;
+    bottom: 10px; left: 50%;
+    transform: translateX(-50%);
+    width: 90%; height: 180px;
+    background: white;
+    z-index: 2;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.passcode-container {
+    text-align: center;
+    opacity: 0;
+}
+
+#reacting-face { font-size: 3rem; margin-bottom: 5px; }
+.prompt-text { font-size: 1.8rem; color: var(--primary-pink); margin-bottom: 10px; }
+
+#passcode-input {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #ffccd5;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 1.1rem;
+    outline: none;
+    font-family: 'Cairo';
+}
+
+/* Stage 3 Styling */
+#full-letter-scene {
+    opacity: 0;
+    display: none;
+    padding: 40px 15px;
+}
+
+.main-title { font-size: 2.2rem; color: var(--primary-pink); text-align: center; }
+.subtitle { text-align: center; margin-bottom: 60px; font-style: italic; opacity: 0.8; }
+
+.story-step {
+    margin-bottom: 100px;
+    display: flex; flex-direction: column; align-items: center;
+}
+
+.step-title {
+    font-family: 'Amiri', serif;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+}
+
+/* Enhanced Frame (Photograph with Cloud effect) */
+.frame-container {
+    background: white;
+    padding: 12px 12px 45px 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    transform: rotate(calc(Math.random() * 4 - 2));
+}
+
+.photo-frame {
+    width: 280px; height: 280px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.audio-card {
+    max-width: 500px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    border: 3px dashed var(--primary-pink);
+}
+
+/* The Final Letter Decoration */
+.final-letter-card {
+    max-width: 600px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.letter-inner {
+    border: 1px solid #ffccd5;
+    padding: 30px;
+    background-image: radial-gradient(#fdf0f0 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.final-letter-card h2 { color: var(--primary-pink); margin-bottom: 20px; }
+.final-letter-card p { line-height: 2; font-size: 1.15rem; text-align: justify; }
+.signature { margin-top: 30px; font-weight: 900; color: var(--primary-pink); text-align: left; }
